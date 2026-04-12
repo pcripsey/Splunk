@@ -1,3 +1,3 @@
-### Release V2
+### Release V1.1
 
-Production Docker Hub publish workflow and deployment improvements
+Version bump release from V1 to V1.1.
