@@ -1,5 +1,5 @@
 # Grab base Alpine
-FROM alpine:3.17.1
+FROM alpine:3.23.3
 LABEL author="atunnecliffe <andrew@atunnecliffe.com>"
 
 # Set environment variables
@@ -59,7 +59,7 @@ RUN apk add --no-cache --virtual wget tar alpine-sdk ca-certificates procps tzda
 # Install custom glibc builder compatible with Splunk
 RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
     wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.29-r0/glibc-2.29-r0.apk && \
-    apk add glibc-2.29-r0.apk && \
+    apk add --force-overwrite glibc-2.29-r0.apk && \
     rm -f glibc-2.29-r0.apk
 
 # Set up ports and volumes
