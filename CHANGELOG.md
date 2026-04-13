@@ -1,6 +1,5 @@
 ## Changelog
 
-### Version V2
+### Version V1.1
 
-- Added production Docker Hub publish workflow.
-- Improved deployment process.
+- Bumped GitHub release version from V1 to V1.1.
